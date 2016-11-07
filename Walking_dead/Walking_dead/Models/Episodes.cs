@@ -24,28 +24,8 @@ namespace Walking_dead.Models
 
         public EpisodeContext()
         {
-            Database.SetInitializer<EpisodeContext>(new WalkingDeadDbInitializer());
+           
         }
     }
-
-    public class WalkingDeadDbInitializer : DropCreateDatabaseAlways<EpisodeContext>
-    {
-        protected override void Seed(EpisodeContext context)
-        {
-            base.Seed(context);
-            context.Episodes.Add(new Models.Episode()
-            {
-                Complete = false,
-                Date_Aired = "10/31/2009",
-                Episodes = 1,
-                Plot = "Bunch of people DIE",
-                Review = "Popcorn was necessary",
-                Season = 1,
-                Title = "DEATH VISITS YOU NOW"
-            });
-            context.SaveChanges();
-        }
-    }
-
 
 }
