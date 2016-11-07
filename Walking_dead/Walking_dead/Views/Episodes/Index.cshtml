@@ -1,10 +1,11 @@
 ﻿@model IEnumerable<Walking_dead.Models.Episode>
 
 @{
+    
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Episodes</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -24,10 +25,14 @@
             @Html.DisplayNameFor(model => model.Date_Aired)
         </th>
         <th>
+           <div class="phone-view">
             @Html.DisplayNameFor(model => model.Plot)
+           </div>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Review)
+            <div class="phone-view">
+             @Html.DisplayNameFor(model => model.Review)
+            </div>
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Complete)
@@ -50,10 +55,14 @@
             @Html.DisplayFor(modelItem => item.Date_Aired)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Plot)
+            <div class="phone-view">
+             @Html.DisplayFor(modelItem => item.Plot)
+            </div>
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Review)
+            <div class="phone-view">
+             @Html.DisplayFor(modelItem => item.Review)
+            </div>
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Complete)

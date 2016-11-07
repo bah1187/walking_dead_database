@@ -17,24 +17,29 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-               <img src="~/Content/walkingdead.png" class="logo" />
-       
+            <img src="~/Content/walkingdead.png" class="logo" />
+     
+    
+                <div class="nav-border"></div>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    @Html.ActionLink("Home", "Index")
+                    @Html.ActionLink("About", "Index")
                 </ul>
             </div>
         </div>
     </div>
 
-    <div class="container body-content">
+   <div class="background">
+     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
     </div>
-
+   </div>
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
 </body>
