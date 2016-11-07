@@ -97,9 +97,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Walking_dead.Models.EpisodeContext.mdf" />
-    <Content Include="App_Data\Walking_dead.Models.EpisodeContext_log.ldf">
-      <DependentUpon>Walking_dead.Models.EpisodeContext.mdf</DependentUpon>
+    <Content Include="App_Data\EpisodeContext.mdf" />
+    <Content Include="App_Data\EpisodeContext_log.ldf">
+      <DependentUpon>EpisodeContext.mdf</DependentUpon>
     </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />

@@ -20,12 +20,12 @@ namespace Walking_dead.Models
 
     public class EpisodeContext : DbContext
     {
-         public DbSet<Episode> Episodes { get; set; }
-
-        public EpisodeContext()
+        public EpisodeContext() 
+            : base("name=EpisodeContext") 
         {
-           
         }
+        public DbSet<Episode> Episodes { get; set; }
+
     }
 
 }
