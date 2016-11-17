@@ -18,7 +18,11 @@ namespace Walking_dead
         public ActionResult Index()
         {
             return View(db.Episodes.ToList());
+
         }
+
+
+
 
         // GET: Episodes/Details/5
         public ActionResult Details(int? id)

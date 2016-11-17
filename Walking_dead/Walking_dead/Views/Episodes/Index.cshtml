@@ -1,11 +1,11 @@
 ﻿@model IEnumerable<Walking_dead.Models.Episode>
 
 @{
-    
-    ViewBag.Title = "Index";
+
+   
 }
 
-<h2>Episodes</h2>
+<h2>Episodes</h2>       @Model.Where(x=>x.Complete == true).Count()
 
 <p>
     @Html.ActionLink("Create New", "Create")
