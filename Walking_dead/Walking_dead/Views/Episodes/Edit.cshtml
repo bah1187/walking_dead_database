@@ -3,9 +3,11 @@
 @{
     ViewBag.Title = "Edit";
 }
+<!--Edit Page with forms to edit episode Data-->
 
 <h2>Edit</h2>
 
+<!--Start of Form-->
 
 @using (Html.BeginForm())
 {
@@ -17,6 +19,7 @@
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.EpisodeID)
 
+<!--Edit "season" Textbox-->
         <div class="form-group">
             
                 @Html.LabelFor(model => model.Season, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -25,6 +28,8 @@
                 @Html.ValidationMessageFor(model => model.Season, "", new { @class = "text-danger" })
             </div>
             
+<!--Edit "Plot" Textbox-->
+
                 @Html.LabelFor(model => model.Plot, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-7">
                 @Html.TextAreaFor(model => model.Plot, new { htmlAttributes = new { @class = "form-control" } })
@@ -32,7 +37,7 @@
             </div>
             </div>
         
-         
+ <!--Edit "Episode" Textbox-->        
 
         <div class="form-group">
             @Html.LabelFor(model => model.Episodes, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -41,7 +46,7 @@
                 @Html.ValidationMessageFor(model => model.Episodes, "", new { @class = "text-danger" })
             </div>
         
-
+<!--Edit "Review" Textbox-->
      
             @Html.LabelFor(model => model.Review, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-7">
@@ -52,7 +57,7 @@
 
 
 
-
+<!--Edit "Title" Textbox-->
 
         <div class="form-group">
             @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -62,6 +67,8 @@
             </div>
         </div>
 
+<!--Edit "Date Aired" Textbox-->
+
         <div class="form-group">
             @Html.LabelFor(model => model.Date_Aired, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-2">
@@ -69,6 +76,7 @@
                 @Html.ValidationMessageFor(model => model.Date_Aired, "", new { @class = "text-danger" })
             </div>
         </div>
+<!--Edit "Complete" Checkbox-->
 
         <div class="form-group">
             @Html.LabelFor(model => model.Complete, htmlAttributes: new { @class = "control-label col-md-2" })

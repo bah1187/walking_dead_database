@@ -18,22 +18,15 @@ textarea {
     max-width: 500px;
 }
 
+/*Logo*/
+
  .logo  {
 width:300px;
 height:110px;
 
 }
 
- a:visited {
-text-decoration:none ;
-
-}
-
- .long-textbox{
-     width:200px;
-     height:100px;
-
- }
+ /*Making Textboxes bigger on edit page*/
 
 textarea {
 width: 600px;
@@ -41,17 +34,50 @@ height: 75px;
 
 }
 
+/*Background*/
+
 .background {
 
 background-color:black;
 
 }
 
+/*Nav Heading*/
+
 .nav-border {
 border-bottom-style:solid;
 border-bottom-color:yellow;
 
 }
+
+
+/*Counter*/
+
+.col-md-9 {
+margin-top: 30px;
+padding-top:25px;
+padding-bottom:25px;
+text-align:center;
+background-image:url(dead.jpg);
+color:white;
+background-repeat:no-repeat;
+}
+
+ .col-md-9 h3 {
+ color:white;
+ 
+  }
+
+
+ /*Table Body */
+
+.table {
+margin-top:30px;
+
+}
+
+
+/*Media Queries*/
 
 @media (max-width: 950px) {
     .phone-view {

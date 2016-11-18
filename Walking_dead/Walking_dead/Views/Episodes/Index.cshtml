@@ -4,12 +4,22 @@
 
    
 }
+<!--Counter , counting the amount of true boolean value under the complete model (Episodes watched)-->
 
-<h2>Episodes</h2>       @Model.Where(x=>x.Complete == true).Count()
-
+    <div class="row">
+       <div class="col-md-3"> <h3>Episodes</h3> </div>
+        <div class="counter">
+         <div class="col-md-9"> <h2>You Have Completed</h2>  @Model.Where(x => x.Complete == true).Count() <h3>Episodes</h3> </div>
+        </div>
+     </div>
+    
+<!--Link to create new data entry-->
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
+<!--Label Names for Table-->
+
 <table class="table">
     <tr>
         <th>
@@ -24,12 +34,12 @@
         <th>
             @Html.DisplayNameFor(model => model.Date_Aired)
         </th>
-        <th>
+        <th>    <!--Phone view make the review and plot disappear at smaller size screens-->
            <div class="phone-view">
             @Html.DisplayNameFor(model => model.Plot)
            </div>
         </th>
-        <th>
+        <th>     <!--Phone view make the review and plot disappear at smaller size screens-->
             <div class="phone-view">
              @Html.DisplayNameFor(model => model.Review)
             </div>
@@ -39,6 +49,8 @@
         </th>
         <th></th>
     </tr>
+   
+     <!--Table Data to display on page from Database-->
 
 @foreach (var item in Model) {
     <tr>
@@ -54,12 +66,12 @@
         <td>
             @Html.DisplayFor(modelItem => item.Date_Aired)
         </td>
-        <td>
+        <td> <!--Phone view make the review and plot disappear at smaller size screens-->
             <div class="phone-view">
              @Html.DisplayFor(modelItem => item.Plot)
             </div>
         </td>
-        <td>
+        <td> <!--Phone view make the review and plot disappear at smaller size screens-->
             <div class="phone-view">
              @Html.DisplayFor(modelItem => item.Review)
             </div>
@@ -68,10 +80,11 @@
             @Html.DisplayFor(modelItem => item.Complete)
         </td>
         <td>
+            <!--Edit, detail, delete links-->
           <button type="button" class="btn btn-primary"> @Html.ActionLink("Edit", "Edit", new { id=item.EpisodeID }) </button>
           <button type="button" class="btn btn-primary"> @Html.ActionLink("Details", "Details", new { id=item.EpisodeID }) </button>
           <button type="button" class="btn btn-danger"> @Html.ActionLink("Delete", "Delete", new { id = item.EpisodeID })</button>
-</td>
+        </td>
     </tr>
 }
 

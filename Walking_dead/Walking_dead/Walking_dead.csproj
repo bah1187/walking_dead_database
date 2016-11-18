@@ -103,6 +103,7 @@
     </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\dead.jpg" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\walkingdead.png" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
